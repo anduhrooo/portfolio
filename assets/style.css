@@ -6,9 +6,9 @@
 }
 
 :root {
-    --primary-color: gray;
+    --primary-color: #b3b3b3;
     --secondary-color: black;
-    --accent-color: pink;
+    --accent-color: lavender;
     --padding-default: 20px;
 }
 
@@ -36,7 +36,7 @@ body {
 
 .image {
     display: flex;
-    background: url(./Default_generate_a_traditional_japanese_pattern_with_only_2737_0.jpg);
+    background: url(./IMG_1626.JPG);
     padding: 400px 0 100px 0;
     justify-content: end;
 }
@@ -46,6 +46,7 @@ body {
     padding: var(--padding-default);
     border: 10px solid var(--accent-color);
     background-color: var(--primary-color);
+    margin-right: var(--padding-default);
 }
 
 .sectiontitle {
@@ -71,7 +72,7 @@ body {
 
 .work {
     display: flex;
-    align-items: start;
+    justify-content: start;
 }
 
 .work div {
@@ -84,6 +85,7 @@ body {
 }
 
 .card {
+    display: flex;
     padding: 100px;
     border: 10px dashed var(--accent-color);
     margin: 10px;
@@ -91,16 +93,26 @@ body {
     background: url(./trim.66F8082D-1D41-42B6-81FD-09FE078C4CDE.GIF);
 }
 
+/* TODO: fix positioning */
+
 .card h3 {
     display: flex;
-    justify-content: center;
-    align-content: center;
     padding: var(--padding-default);
     border: 10px solid var(--accent-color);
     background-color: var(--primary-color);
     position: relative;
-    top: 80px;
-    left: -110px;
+    top: 50%;
+    right: 110px;
+}
+
+.card:first-child {
+    padding: 200px;
+    flex: 1 0 90%;
+    background: url(./38F83D27-EE0B-45F3-BB12-55A5157BCB30.GIF);
+}
+
+.card:first-child h3 {
+    right: 210px;
 }
 
 .contact-me {
@@ -125,4 +137,5 @@ body {
 
 footer {
     text-align: center;
+    background-color: var(--accent-color);
 }
