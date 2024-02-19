@@ -34,16 +34,15 @@ body {
     padding: 0 10px 0 10px;
 }
 
-.imgheader {
-    width: 100%;
+.image {
+    display: flex;
+    background: url(./Default_generate_a_traditional_japanese_pattern_with_only_2737_0.jpg);
+    padding: 400px 0 100px 0;
+    justify-content: end;
 }
 
-/* TODO: fix me pleeeeeeease */
 .imgtext {
     display: flex;
-    justify-content: start;
-    position: relative;
-    top: -200px;
     padding: var(--padding-default);
     border: 10px solid var(--accent-color);
     background-color: var(--primary-color);
