@@ -34,35 +34,74 @@ body {
     padding: 0 10px 0 10px;
 }
 
-.section-title {
-    min-width: 10%;
+.imgheader {
+    width: 100%;
+}
+
+/* TODO: fix me pleeeeeeease */
+.imgtext {
+    display: flex;
+    justify-content: start;
+    position: relative;
+    top: -200px;
+    padding: var(--padding-default);
+    border: 10px solid var(--accent-color);
+    background-color: var(--primary-color);
+}
+
+.sectiontitle {
     display: flex;
     justify-content: end;
+    flex: 0 0 20%;
+    padding-right: 10px;
+    padding-top: var(--padding-default);
 }
 
 .about-me {
     display: flex;
-    align-items: center;
+    align-items: start;
 }
 
 .about-me p {
     flex-wrap: wrap;
-    margin: 10px;
+    flex: 0 0 80%;
+    padding: var(--padding-default);
+    border-left: 10px solid var(--accent-color);
+    margin: 10px 0 10px 0;
 }
 
 .work {
     display: flex;
+    align-items: start;
 }
 
 .work div {
     display: flex;
     flex-wrap: wrap;
+    flex: 0 0 80%;
+    padding: var(--padding-default);
+    border-left: 10px solid var(--accent-color);
+    margin: 10px 0 10px 0;
 }
 
 .card {
     padding: 100px;
     border: 10px dashed var(--accent-color);
     margin: 10px;
+    flex: 1;
+    background: url(./trim.66F8082D-1D41-42B6-81FD-09FE078C4CDE.GIF);
+}
+
+.card h3 {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: var(--padding-default);
+    border: 10px solid var(--accent-color);
+    background-color: var(--primary-color);
+    position: relative;
+    top: 80px;
+    left: -110px;
 }
 
 .contact-me {
@@ -74,6 +113,11 @@ body {
     display: flex;
     list-style: none;
     align-items: center;
+    justify-content: space-around;
+    flex: 1 0 80%;
+    border-left: 10px solid var(--accent-color);
+    padding: var(--padding-default);
+    margin: 10px 0 10px 0;
 }
 
 .contact-me li {
