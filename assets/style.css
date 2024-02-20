@@ -1,3 +1,23 @@
+/* GIVEN I need to sample a potential employee's previous work
+
+WHEN I load their portfolio
+THEN I am presented with the developer's name, a recent photo or avatar, and links to sections about them, their work, and how to contact them
+
+WHEN I click one of the links in the navigation
+THEN the UI scrolls to the corresponding section
+
+WHEN I click on the link to the section about their work
+THEN the UI scrolls to a section with titled images of the developer's applications
+
+WHEN I am presented with the developer's first application
+THEN that application's image should be larger in size than the others
+
+WHEN I click on the images of the applications
+THEN I am taken to that deployed application
+
+WHEN I resize the page or view the site on various screens and devices
+THEN I am presented with a responsive layout that adapts to my viewport */
+
 * {
     box-sizing: border-box;
     padding: 0px;
@@ -87,34 +107,29 @@ body {
 .card {
     display: flex;
     flex-direction: column;
-    padding: 100px;
-    border: 10px dashed var(--accent-color);
-    margin: 10px;
+    margin: 0 10px 0 10px;
     flex: 1;
-    background: url(./trim.66F8082D-1D41-42B6-81FD-09FE078C4CDE.GIF);
 }
 
-/* TODO: fix positioning */
+.card img {
+    width: 100%;
+    height: auto;
+    border: 10px dashed var(--accent-color);
+}
 
-.cardtext {
-    display: flex;
-    flex-direction: column;
-    padding: var(--padding-default);
+.card h3 {
     border: 10px solid var(--accent-color);
     background-color: var(--primary-color);
+    padding: var(--padding-default);
+    display: flex;
+    max-width: fit-content;
     position: relative;
-    top: 50%;
-    right: 110px;
+    top: -200px;
 }
 
 .card:first-child {
-    padding: 200px;
-    flex: 1 0 90%;
-    background: url(./38F83D27-EE0B-45F3-BB12-55A5157BCB30.GIF);
-}
-
-.card:first-child .cardtext {
-    right: 210px;
+    flex: 1 0 95%;
+    background: url();
 }
 
 .contact-me {
@@ -124,9 +139,10 @@ body {
 
 .contact-me ul {
     display: flex;
+    flex-wrap: wrap;
+    text-align: center;
     list-style: none;
-    align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     flex: 1 0 80%;
     border-left: 10px solid var(--accent-color);
     padding: var(--padding-default);
@@ -134,10 +150,23 @@ body {
 }
 
 .contact-me a {
+    display: flex;
+    flex: 1 0 25%;
     padding: 0 100px 0 100px;
 }
 
 footer {
     text-align: center;
     background-color: var(--accent-color);
+}
+
+@media screen and (max-width:992px) {
+    .card {
+        flex-basis: 45%;
+    }
+}
+@media screen and (max-width:768px) {
+    .card {
+        flex-basis: 95%;
+    }
 }
