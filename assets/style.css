@@ -86,6 +86,7 @@ body {
 
 .card {
     display: flex;
+    flex-direction: column;
     padding: 100px;
     border: 10px dashed var(--accent-color);
     margin: 10px;
@@ -95,8 +96,9 @@ body {
 
 /* TODO: fix positioning */
 
-.card h3 {
+.cardtext {
     display: flex;
+    flex-direction: column;
     padding: var(--padding-default);
     border: 10px solid var(--accent-color);
     background-color: var(--primary-color);
@@ -111,7 +113,7 @@ body {
     background: url(./38F83D27-EE0B-45F3-BB12-55A5157BCB30.GIF);
 }
 
-.card:first-child h3 {
+.card:first-child .cardtext {
     right: 210px;
 }
 
@@ -131,8 +133,8 @@ body {
     margin: 10px 0 10px 0;
 }
 
-.contact-me li {
-    padding: 0 10px 0 10px;
+.contact-me a {
+    padding: 0 100px 0 100px;
 }
 
 footer {
