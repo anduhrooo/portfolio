@@ -37,6 +37,10 @@ body {
     color: var(--secondary-color);
 }
 
+a {
+    text-decoration: none;
+}
+
 .title-bar {
     display: flex;
     justify-content: space-between;
@@ -54,19 +58,22 @@ body {
     padding: 0 10px 0 10px;
 }
 
+
 .image {
-    display: flex;
-    background: url(./IMG_1626.JPG);
-    padding: 400px 0 100px 0;
-    justify-content: end;
+    position: relative;
 }
 
-.imgtext {
-    display: flex;
-    padding: var(--padding-default);
-    border: 10px solid var(--accent-color);
+.image img {
+    width: 100%;
+}
+
+.image h3 {
+    position: absolute;
+    bottom: 10%;
+    right: var(--padding-default);
     background-color: var(--primary-color);
-    margin-right: var(--padding-default);
+    border: 10px solid var(--accent-color);
+    padding: var(--padding-default)
 }
 
 .sectiontitle {
@@ -98,7 +105,8 @@ body {
 .work div {
     display: flex;
     flex-wrap: wrap;
-    flex: 0 0 80%;
+    justify-content: space-between;
+    flex: 1 0 80%;
     padding: var(--padding-default);
     border-left: 10px solid var(--accent-color);
     margin: 10px 0 10px 0;
@@ -107,8 +115,9 @@ body {
 .card {
     display: flex;
     flex-direction: column;
-    margin: 0 10px 0 10px;
+    margin: 10px;
     flex: 1;
+    position: relative;
 }
 
 .card img {
@@ -117,19 +126,15 @@ body {
     border: 10px dashed var(--accent-color);
 }
 
-.card h3 {
-    border: 10px solid var(--accent-color);
+.card div {
     background-color: var(--primary-color);
-    padding: var(--padding-default);
-    display: flex;
-    max-width: fit-content;
-    position: relative;
-    top: -200px;
+    border: 10px solid var(--accent-color);
+    position: absolute;
+    top: 75%;
 }
 
 .card:first-child {
-    flex: 1 0 95%;
-    background: url();
+    flex: 1 0 98%;
 }
 
 .contact-me {
@@ -164,7 +169,12 @@ footer {
     .card {
         flex-basis: 45%;
     }
+
+    .title-bar {
+        flex-direction: column;
+    }
 }
+
 @media screen and (max-width:768px) {
     .card {
         flex-basis: 95%;
